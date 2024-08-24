@@ -18,6 +18,11 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/index.js"></script>
   <!-- <link rel="stylesheet" href="assets/css/css/bootstrap.min.css" /> -->
   <link rel="stylesheet" href="assets/css/fastbootstrap/css/fastbootstrap.css" />
 
@@ -188,7 +193,7 @@
                 Discover the essential cloud features every creative needs to streamline projects, collaborate, and stay
                 inspired.
               </p>
-              <a href="#" class="btn btn-outline-primary btn-outline-card stretched-link">Learn More</a>
+              <a href="#" class="btn btn-outline-secondary btn-outline-card stretched-link">Learn More</a>
             </div>
           </article>
           <article class="card shadow-blog g-col-6 ">
@@ -200,7 +205,7 @@
                 Explore how cloud workspaces empower creatives to collaborate seamlessly, access files anywhere, and
                 boost...
               </p>
-              <a href="#" class="btn btn-outline-primary btn-outline-card stretched-link">Learn More</a>
+              <a href="#" class="btn btn-outline-secondary btn-outline-card stretched-link">Learn More</a>
             </div>
           </article>
           <article class="card shadow-blog g-col-6 ">
@@ -212,7 +217,7 @@
                 Enhance your creative projects by collaborating in real-time with cloud tools that keep your team in
                 sync.
               </p>
-              <a href="#" class="btn btn-outline-primary btn-outline-card stretched-link">Learn More</a>
+              <a href="#" class="btn btn-outline-secondary btn-outline-card stretched-link">Learn More</a>
             </div>
           </article>
           <article class="card shadow-blog g-col-6 ">
@@ -224,7 +229,7 @@
               <p class="card-text">
                 Startup Framework works fine on devices supporting Retina Desplay. Feel the clarity!
               </p>
-              <a href="#" class="btn btn-outline-primary btn-outline-card btn-outline stretched-link">Learn More</a>
+              <a href="#" class="btn btn-outline-secondary btn-outline-card btn-outline stretched-link">Learn More</a>
             </div>
           </article>
           <article class="card shadow-blog g-col-6 ">
@@ -235,7 +240,7 @@
               <p class="card-text">
                 Startup Framework works fine on devices supporting Retina Desplay. Feel the clarity!
               </p>
-              <a href="#" class="btn btn-outline-primary btn-outline-card stretched-link">Learn More</a>
+              <a href="#" class="btn btn-outline-secondary btn-outline-card stretched-link">Learn More</a>
             </div>
           </article>
           <article class="card shadow-blog g-col-6 ">
@@ -246,7 +251,7 @@
               <p class="card-text">
                 Startup Framework works fine on devices supporting Retina Desplay. Feel the clarity!
               </p>
-              <a href="#" class="btn btn-outline-primary btn-outline-card stretched-link">Learn More</a>
+              <a href="#" class="btn btn-outline-secondary btn-outline-card stretched-link">Learn More</a>
             </div>
           </article>
 
@@ -257,7 +262,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-8 teext-center">
-            <h2 class="text-primary fw-bold text-center mb-5 title-pricing">
+            <h2 class="text-primary fw-bold text-center title-pricing">
               Choose the right plan for your needs
             </h2>
             <div class="d-flex flex-row justify-content-center align-items-center mb-5">
@@ -274,184 +279,75 @@
 
 
           </div>
-          <div class="col-12 col-md-5">
+        </div>
+        <div class="pricin-slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper justify-content-">
+              <div class="swiper-slide pricing-cards">
+                <div class="pricing-card basic-plan h-100">
+                  <h5>Basic Plan</h5>
+                  <p class="price">FREE</p>
+                  <p class="feature">No credit card required</p>
+                  <hr>
+                  <ul class="features">
+                    <li>Free 5 GB of storage</li>
+                    <li>Chat features</li>
+                    <li>Auto Timestamp notes</li>
+                    <li>Direct export to social media</li>
+                  </ul>
+                  <a class="btn btn-custom btn-outline-secondary stretched-link shadow-lg">Get started</a>
+                </div>
+              </div>
+              <div class="swiper-slide pricing-cards">
+                <div class=" pricing-card pro-plan h-100">
+                  <h5>Pro Plan</h5>
+                  <p class="price"><span class="small">$</span><span class="price-m js-price" id="price"
+                      data-price="14.99" data-price-discount="11.99">11.99</span><span class="small">/month</span></p>
+                  <p class="feature js-feature-text" data-text="Billed Yearly" data-month="Billeed Monthly">Billed
+                    Yearly
+                  </p>
+                  <hr>
+                  <ul class="features">
+                    <li>3 TB of storage</li>
+                    <li>Encrypted Messenger</li>
+                    <li>Auto Timestamp notes</li>
+                    <li>Zip and Unzip files in app</li>
+                    <li>Edit PDFs and Docs</li>
+                    <li>Media Player</li>
+                  </ul>
+                  <a class="btn btn-primary btn-custom stretched-link shadow-lg">Sign Up</a>
+                </div>
+              </div>
 
-            <div class=" pricing-card basic-plan h-100">
-              <h5>Basic Plan</h5>
-              <p class="price">FREE</p>
-              <p class="feature">No credit card required</p>
-              <hr>
-              <ul class="features">
-                <li>Free 5 GB of storage</li>
-                <li>Chat features</li>
-                <li>Auto Timestamp notes</li>
-                <li>Direct export to social media</li>
-              </ul>
-              <a class="btn btn-custom btn-outline-primary stretched-link">Get started</a>
             </div>
+
           </div>
-          <div class="col-12 col-md-5">
-            <div class=" pricing-card pro-plan h-100">
-              <h5>Pro Plan</h5>
-              <p class="price"><span class="small">$</span><span class="price-m js-price" id="price" data-price="14.99"
-                  data-price-discount="11.99">11.99</span><span class="small">/month</span></p>
-              <p class="feature js-feature-text" data-text="Billed Yearly" data-month="Billeed Monthly">Billed Yearly
-              </p>
-              <hr>
-              <ul class="features">
-                <li>3 TB of storage</li>
-                <li>Encrypted Messenger</li>
-                <li>Auto Timestamp notes</li>
-                <li>Zip and Unzip files in app</li>
-                <li>Edit PDFs and Docs</li>
-                <li>Media Player</li>
-              </ul>
-              <a class="btn btn-primary btn-custom stretched-link">Sign Up</a>
+          <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="form bg-primary">
+      <div class="container my-5 container-form">
+        <div class="row align-items-center rounded p-4">
+          <div class="col-md-6 text-white">
+            <h3 class="cta-title">Receive updates and join our Beta program</h3>
+          </div>
+          <div class="col-md-6">
+            <div class="form">
+              <form class="d-flex flex-column gap-3 align-items-end align-items-sm-center">
+
+                <input type="text" class="form-control" placeholder="Your Name" aria-label="Your Name">
+                <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                <button type="submit" class="btn btn-primary"
+                  style="background: #00e6e6; border: none; color: #fff;">Sign
+                  up now</button>
+              </form>
             </div>
           </div>
         </div>
-    </section>
-    <section>
-      <style>
-        .pricing-card {
-          border-radius: 20px;
-          padding: 50px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          margin: 10px;
-        }
+      </div>
 
-        .pricing-card .feature {
-          font-size: 14px !important;
-          margin-bottom: 40px !important;
-        }
-
-        .pricing-card h5 {
-          font-weight: bold;
-          font-size: 20px;
-        }
-
-        .pricing-card .price {
-          line-height: 80px;
-          font-size: 48px;
-          color: #007bff;
-          font-weight: bold;
-          margin-bottom: 0;
-        }
-
-        .pro-plan .price {
-          color: #fff !important;
-        }
-
-        .pro-plan .price .small {
-          font-size: 28px;
-          font-weight: 700;
-        }
-
-        .pricing-card .features {
-          list-style: none;
-          padding: 0;
-          margin-top: 20px;
-          margin-bottom: 50px;
-          min-height: 250px;
-        }
-
-        .pricing-card .features li {
-          margin: 10px 0;
-          display: flex;
-          font-size: 16px;
-          font-weight: 700;
-          align-items: center;
-        }
-
-        .pro-plan .features li::before {
-          content: '';
-          background-image: url(./assets/img/star.svg);
-          color: #343a40;
-          margin-right: 10px;
-          width: 20px;
-          height: 20px
-        }
-
-        .basic-plan .features li::before {
-          content: '';
-          background-image: url(./assets/img/star-blue.svg);
-          color: #343a40;
-          margin-right: 10px;
-          width: 20px;
-          height: 20px
-        }
-
-        .btn-custom {
-          border-radius: 8px;
-          padding: 10px 20px;
-          font-weight: bold;
-          transition: 0.3s;
-        }
-
-        .basic-plan {
-          background-color: #f8f9fa;
-        }
-
-        .basic-plan .price {
-          color: #007bff;
-        }
-
-        .basic-plan a {
-          background-color: #fff;
-          border: 2px solid #343a40;
-          color: #343a40;
-          padding: 18px 110px;
-        }
-
-        .pro-plan {
-          background-color: #0d1b2a;
-          color: #fff;
-        }
-
-        .pro-plan .price {
-          color: #00aaff;
-        }
-
-        .pro-plan a {
-          background-color: #007bff;
-          border: none;
-          color: #fff;
-          padding: 18px 110px;
-        }
-
-        .carousel-item {
-          display: flex;
-          justify-content: center;
-        }
-
-        .pro-plan hr {
-          background-color: #055F5B;
-        }
-
-        .pricing-card hr {
-          margin-bottom: 40px;
-        }
-      </style>
     </section>
   </main>
-  <script>
-    const priceSpan = document.querySelector('.js-price');
-    const priceText = document.querySelector('.js-feature-text');
-    const checkbox = document.getElementById('switchSizeLargeChecked');
-
-    checkbox.addEventListener('change', function () {
-      if (checkbox.checked) {
-        // Mostrar precio con descuento
-        priceSpan.innerHTML = priceSpan.getAttribute('data-price-discount');
-        priceText.innerHTML = priceText.getAttribute('data-text');
-      } else {
-        // Mostrar precio sin descuento
-        priceSpan.innerHTML = priceSpan.getAttribute('data-price');
-        priceText.innerHTML = priceText.getAttribute('data-month');
-      }
-    });
-  </script>
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-5 bg-primary">
     <div class="container">
