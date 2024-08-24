@@ -42,6 +42,7 @@ body{
 .container-blog .card{
   border-radius: 16px;
   overflow: hidden;
+  border: none;
 }
 .container-blog .card .card-title{
   color: #0A133C!important;
@@ -94,7 +95,7 @@ body{
   .features .cards{
     text-align: start!important;
    }
-  .card-container:not(:last-child){
+  .card__container:not(:last-child){
     border-right: 2px solid rgba(255,255,255,0.15);
     border-bottom: none!important;
   }
@@ -228,7 +229,7 @@ input:focus {
 	/* width: 100%; */
 	height: auto;
 }
-.card-container:not(:last-child){
+.card__container:not(:last-child){
   border-bottom: 2px solid rgba(255,255,255,0.15);
 }
 .cards{
