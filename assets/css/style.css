@@ -4,7 +4,7 @@ body{
 	overflow-x: hidden!important;
 	max-width: 100vw;
 }
-section{
+.pricing-table{
   overflow-x: hidden;
 }
 header.header{
@@ -20,6 +20,23 @@ header.header{
 }
 .navbar-toggler{
   border: none!important;
+}
+.header .nav-link{
+  font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+opacity: 0.7;
+margin-right: 40px;
+transition: all ease 0.2s;
+}
+.header .nav-link:hover{
+  opacity: 1;
+}
+.form-check-input{
+  background-color: #818998!important;
+}
+.navbar-nav{
+  margin-right: 60px;
 }
 .offcanvas.show .nav-link{
   color: #000000!important;
@@ -333,7 +350,13 @@ a {
   text-align: justify;
 }
 @media (765px < width < 992px) {
-
+  .airplane{
+    position: absolute!important;
+    right: 0!important;
+    left: -10%;
+    min-width: 95vw !important;
+    top: 30px;
+  }
 	.form-group button {
 		font-size: 14px;
 		padding: 10px 20px;
@@ -380,7 +403,9 @@ a {
   .airplane{
     position: absolute;
     right: 10%;
-    left: 0;
+    left: -10%;
+    top: 50px;
+    min-width: 100vw;
   }
 	.container {
 		padding-left: 45px;
@@ -413,8 +438,9 @@ a {
 @media (width > 1200px) {
   .airplane{
     position: absolute;
-    right: 10%;
-    left: 0;
+    right: 0;
+    /* left: -10%; */
+    min-width: 90vw !important;
   }
 
 	.btn-main {
@@ -671,15 +697,55 @@ a {
   border-radius: 50%; /* Hace el punto circular */
 }
 .faq-container{
-  padding-top: 100px;
-  padding-bottom: 100px;
   background-color: #EFEFEF;
   border-radius: 24px;
+  box-shadow: 0px 16px 16px -8px rgba(12, 12, 13, 0.1), 0px 4px 4px -4px rgba(12, 12, 13, 0.05);
+
+}
+.faq-container .accordion-button::after{
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='51' viewBox='0 0 52 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25.6824' cy='25.4327' r='25.3309' fill='white'/%3E%3Cpath d='M22.5723 33.6892L30.7915 25.4327L22.5723 17.1761' stroke='%23256CFD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 5px 16px rgba(8, 15, 52, 0.06);
+
+}
+.faq-container .accordion-button:not(.collapsed)::after{
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='51' viewBox='0 0 52 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25.6824' cy='25.5006' r='25.3309' fill='%23256CFD'/%3E%3Cpath d='M17.4258 22.391L25.6824 30.6102L33.939 22.391' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  transform: rotate(360deg);
+  width: 50px!important;
+  height: 50px!important;
+  background-size: cover!important;
+
 }
 .faq-container .accordion-item{
   padding: 35px;
   border-radius: 14px;
   margin-bottom: 30px;
+  box-shadow: 0px 6px 16px rgba(37, 108, 253, 0.15);
+}
+.accordion-item .accordion-header button{
+  font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 28px;
+color: #0A133C;
+}
+.accordion-item .accordion-body{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #5B5E65;
+}
+.p-relative{
+  position: relative;
+}
+.container-accordion{
+  padding-right: 10px;
+  padding-left: 10px;
 }
 /*Mediaqueries*/
 /* Para pantallas grandes (desktop) */
@@ -697,6 +763,12 @@ a {
 @media ( width > 992px) {
   .page-title{
     font-size: 42px;
+  }
+  .container-accordion{
+    padding-right: 170px;
+    padding-left: 170px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .card-img-top{
     aspect-ratio: 370/280;

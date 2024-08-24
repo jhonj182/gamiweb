@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (swiperContainer) {
     var swiper = new Swiper(swiperContainer, {
       slidesPerView: 1.1, // Permite ver parte de la siguiente tarjeta
-      spaceBetween: 8, // Espacio entre tarjetas
+      spaceBetween: 20, // Espacio entre tarjetas
       centeredSlides: true,
       grabCursor: true,
       pagination: {
