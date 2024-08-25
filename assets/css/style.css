@@ -873,13 +873,13 @@ border-radius: 16px;
 font-weight: 500;
 font-size: 18px;
 line-height: 26px;
-display: flex;
-align-items: center;
 text-align: center;
 color: #0A133C;
 border: none;
 padding: 14px 20px;
-
+min-width: 100%;
+margin-top: 20px;
+margin-left: 0px;
 }
 .sidebar-post .card:nth-last-child(2) {
   margin-bottom: 45px!important;
@@ -898,6 +898,10 @@ padding: 14px 20px;
   }
 }
 @media ( width > 992px) {
+  .btn-main.green{
+    max-width: none;
+    margin-top: 0;
+  }
   .page-title, .post-title{
     font-size: 42px;
   }
