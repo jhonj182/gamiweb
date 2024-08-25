@@ -44,9 +44,18 @@ transition: all ease 0.2s;
 .title__pricing{
   margin-bottom: 20px;
 }
-.sr-only{
-  display: none;
+.sr-only {
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap; /* Evita el salto de línea */
 }
+
 .form-check-label{
   font-size: 16px!important;
 }
@@ -142,6 +151,11 @@ section{
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 34px;
+}
+.post-title{
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
 }
 .wpcf7-response-output {
 	background-color: #33F3C8 !important;
@@ -747,6 +761,129 @@ color: #0A133C;
   padding-right: 10px;
   padding-left: 10px;
 }
+.hero__post-image{
+  aspect-ratio: 1199/600;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+}
+.post-body{
+  padding: 90px 0;
+}
+.post-body .img-post{
+  border-radius: 10px;
+}
+figcaption{
+
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+color: rgba(21, 20, 57, 0.4);
+}
+.date-post{
+font-family: 'Urbanist';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 26px;
+color: rgba(21, 20, 57, 0.4);
+margin-bottom: 30px;
+display: inline-block;
+}
+.sidebar-post .card{
+  border: none;
+  margin-bottom: 25px!important;
+}
+.sidebar-post .card-img{
+  aspect-ratio: 170/105;
+  border-radius: 10px;
+  min-width: 170px;
+  margin-right: 20px;
+}
+.sidebar-post .card-title{
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+color: #1E0E62;
+}
+.sidebar-post .card-text{
+
+font-family: 'Urbanist';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* identical to box height, or 162% */
+
+/* Colors / Text */
+color: rgba(21, 20, 57, 0.4);
+
+}
+.sidebar-post .sidebar-title{
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(21, 20, 57, 0.4);
+  mix-blend-mode: normal;
+  margin-bottom: 18px;
+}
+.sidebar-post .card-form{
+/* Colors / Grey */
+width: 100%;
+border: 2px solid #EBEAED;
+border-radius: 10px;
+padding: 31px;
+
+}
+.sidebar-post .card-form .title-form{
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+color: #0A133C;
+}
+.form-rounded .form-control{
+  border: none;
+  border: 2px solid #EBEAED;
+  border-radius: 100px;
+  font-family: 'Urbanist';
+  font-style: normal;
+  padding: 12px 24px !important;
+  font-weight: 500;
+  font-size: 18px !important;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: rgba(21, 20, 57, 0.4);
+  border-radius: 100px !important;
+}
+.mb-18{
+  margin-bottom: 18px;
+}
+.btn-main.green{
+background: #34F3C8;
+border-radius: 16px;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #0A133C;
+border: none;
+padding: 14px 20px;
+
+}
+.sidebar-post .card:nth-last-child(2) {
+  margin-bottom: 45px!important;
+}
 /*Mediaqueries*/
 /* Para pantallas grandes (desktop) */
 @media  ( width > 762px) {
@@ -761,7 +898,7 @@ color: #0A133C;
   }
 }
 @media ( width > 992px) {
-  .page-title{
+  .page-title, .post-title{
     font-size: 42px;
   }
   .container-accordion{
