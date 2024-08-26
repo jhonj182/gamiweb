@@ -584,7 +584,7 @@ a {
 
 .pro-plan .features li::before {
   content: '';
-  background-image: url(/assets/img/star.svg);
+  background-image: url(/gamiweb/assets/img/star.svg);
   color: #343a40;
   margin-right: 10px;
   width: 20px;
@@ -593,7 +593,7 @@ a {
 
 .basic-plan .features li::before {
   content: '';
-  background-image: url(/assets/img/star-blue.svg);
+  background-image: url(/gamiweb/assets/img/star-blue.svg);
   color: #343a40;
   margin-right: 10px;
   width: 20px;
