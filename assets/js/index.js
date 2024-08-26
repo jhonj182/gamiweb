@@ -40,12 +40,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const header = document.querySelector(".header");
   if (header) {
-    document.addEventListener("scroll", function () {
-      if (window.scrollY > 20) {
-        header.classList.add("sticky");
+    let lastScrollTop = 0;
+    const header = document.querySelector(".header");
+
+    window.addEventListener("scroll", function () {
+      let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScrollTop > lastScrollTop) {
+        // El usuario está haciendo scroll hacia abajo
+        header.classList.remove("visible"); // Quita "visible" primero
+        setTimeout(() => header.classList.remove("sticky"), 300); // Luego quita "sticky" con un pequeño delay
+      } else if (currentScrollTop === 0) {
+        header.classList.remove("sticky", "visible");
       } else {
-        header.classList.remove("sticky");
+        // El usuario está haciendo scroll hacia arriba
+        header.classList.add("sticky"); // Añade primero "sticky"
+        setTimeout(() => header.classList.add("visible"), 10); // Luego añade "visible" con un pequeño delay para activar la transición
       }
+
+      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Evitar números negativos
     });
+
   }
 });

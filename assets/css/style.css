@@ -7,14 +7,29 @@ body{
 .pricing-table{
   overflow-x: hidden;
 }
-header.header{
-  position: fixed;
+.header {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 5000;
-  border-bottom: none!important;
+  transition: transform 0.5s ease-in-out; /* Cambié a 0.5s para una animación más fluida */
 }
+
+.header.sticky {
+  transform: translateY(-100%);
+  position: fixed;
+  background-color: #0A133C;
+}
+
+.header.sticky.visible {
+  transform: translateY(0);
+}
+
+.light .header.sticky {
+  background-color: #fff;
+}
+
 .offcanvas{
   z-index: 5000;
 }
@@ -658,12 +673,6 @@ a {
   border-radius: 8px!important;
   padding: 10px 15px!important;
   font-size: 14px!important;
-}
-.header.sticky{
-  background-color: #0A133C;
-}
-.light .header.sticky{
-  background-color: #fff;
 }
 .terms-intro{
   font-weight: 600!important;
